@@ -4,7 +4,13 @@ Uncomment
 Search for PS1 make 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;30m\]\t \[\033[01;37m\]\u:\[\033[01;33m\]\[\033[01;32m\](\h)\[\033[00m\]:\[\033[01;96m\]$(pwd)\[\033[00m\]\$ '
 
-at end add 
+Find alias ll='ls -alF'
+CHANGE
+alias ll='ls -lF'
+ADD
+alias lla='ls -alF'
+
+At end add 
 
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then

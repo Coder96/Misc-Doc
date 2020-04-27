@@ -1,4 +1,4 @@
-Uncomment 
+Might not be needed anymoreUncomment 
 #force_color_prompt=yes
 
 Search for PS1 make 
@@ -17,7 +17,7 @@ if [ "$TERM" != "dumb" ]; then
     [ -e "$HOME/.dir_colors" ] && DIR_COLORS="$HOME/.dir_colors"
     [ -e "$DIR_COLORS" ] || DIR_COLORS=""
     eval "`dircolors -b $DIR_COLORS`"
-    alias ls='ls --color=auto'
+    #alias ls='ls --color=auto'
     #alias dir='ls --color=auto --format=vertical'
     #alias vdir='ls --color=auto --format=long'
 fi

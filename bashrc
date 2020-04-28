@@ -1,5 +1,5 @@
-Might not be needed anymoreUncomment 
-#force_color_prompt=yes
+Change for root
+force_color_prompt=yes
 
 Search for PS1 make 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;30m\]\t \[\033[01;37m\]\u:\[\033[01;33m\]\[\033[01;32m\](\h)\[\033[00m\]:\[\033[01;96m\]$(pwd)\[\033[00m\]\$ '

@@ -1,0 +1,99 @@
+
+Settings->Routhing & Firewall->Firewall->Rules IPv4->LAN IN
+
+Create Rule
+Name:Allow related and established sessions
+Action:Accept
+ADVANCED
+States:Established
+States:related
+SOURCE
+Source Type:Addres port Group
+IPv4 Address Group:All Local addresses
+DESTINATION
+Destination Type:Addres port Group
+IPv4 Address Group: All Local addresses
+
+Create Rule
+Name:Accept all NTP Request
+Action:Accept
+SOURCE 
+Destination Type:Addres port Group 
+IPv4 Address Group:All Local addresses
+DESTINATION
+Destination Type:Addres port Group 
+IPv4 Address Group:Any
+Port Group:NTP Port
+
+Create Rule
+Name:Allow NoT to MQTT -- may chage to ha
+Action:Accept
+SOURCE 
+Source Type:Network
+Network:NoT
+DESTINATION
+Destination Type:Address/Port Group
+IPv4 Address Group:Home Assistant Server
+Port Group: MQTT Ports
+
+Create Rule
+Name:Allow Iot to Home Assistant
+Action:Accept
+SOURCE
+Source Type:Address/Port Group
+Network:IoT
+DESTINATION
+Destination Type:Address/Port Group
+IPv4 Address Group:Home Assistant Server
+
+Create Rule
+Name:Allow chromcast
+Action:Accept
+SOURCE
+Source Type:Address/Port Group
+IPv4 Address Group:Chromecast -- Group With just thoes devices
+DESTINATION
+Destination Type:Address/Port Group 
+IPv4 Address Group:Any
+Port Group: Chromcast
+
+
+
+Create Rule
+Name:Block IoT from LAN
+Action:Drop
+SOURCE
+Source Type:Network
+Network:NoT
+DESTINATION
+Destination Type:Network
+Network:LAN
+
+Create Rule
+Name:Block IoT from NoT
+Action:Drop
+SOURCE
+Source Type:Network
+Network:IoT
+DESTINATION
+Destination Type:Network
+Network:NoT
+
+Create Rule
+Name:Block all NoT
+Action:Drop
+SOURCE
+Source Type:Network
+Network:NoT
+DESTINATION
+Destination Type:Address/Port Group
+IPv4 Address Group: All IP Addresses
+
+Create Rule
+Name:Block All cameras
+SOURCE
+Source Type:Address/Port Group
+IPv4 Adress Group:Cameras
+DESTINATION
+Destination:Address/Port Group
+IPv4 Adress Group:All IP Addresses

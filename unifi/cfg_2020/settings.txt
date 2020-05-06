@@ -1,0 +1,19 @@
+
+Override Access Points names for IoT and NoT.
+Devices->Selct the Access Poin->Gear icon
+WLANS Option
+click te edit icon to the right 
+Add location description the ssid name for the AP.
+
+Disable 5gfor Iot and NoT if no 5g Devices
+Devices->Selct the Access Poin->Gear icon
+WLANS->WLAN 5G(11n/a/ac)
+Enable on this AP:Toggle off
+
+MDNS
+Settings->Services->MDNS 
+Enable Multicast DNS:ON
+
+Settings->Site
+Auot-OPTIMIZE NETWORK
+Automatically Optimize Network and WiFi performance:OFF

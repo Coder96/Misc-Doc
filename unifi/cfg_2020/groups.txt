@@ -1,0 +1,46 @@
+Settings->Routhing & Firewall->Firewall->Groups
+
+Create new group 
+Type: Address IPv4
+Name:All Local addresses
+Address:192.168.10.0/24
+Address:192.168.30.0/24
+Address:192.168.51.0/24
+Address:192.168.70.0/24
+
+Create new group 
+Name:NTP Port
+Type: Port
+Port:123
+
+Create new group 
+Name:MQTT Ports
+Type: Port
+Port:1883
+Port:8883
+
+Create new group 
+Name:Home Assistant Server
+Type: Address IPv4
+Address:192.168.40.51
+
+Create new group 
+Name:Chromcast
+Type: Port
+Port:8008
+Port:8009
+Port:5556
+Port:5558
+Port:5353
+
+Create new group 
+Name: All IP Addresses
+Type: Address IPv4
+Address:0.0.0.0/1
+Address:128.0.0.0/2
+Address:192.0.0.0/3
+Address:224.0.0.0/4
+
+Create new group 
+Name:Cameras
+Address: One entry for each camera.

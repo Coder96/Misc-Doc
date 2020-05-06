@@ -1,0 +1,22 @@
+LAN        Corp   192.168.40.1/24
+IoT           Guest 192.168.70.1/24    2070   Enable IGMP
+NoT         Corp   192.168.51.1/24    2051   Enable IGMP
+
+Setup wireless networks
+Random
+Security: WPA Personal
+RandomGuest     WAP P
+
+RandomIoT
+Security: WPA Personal
+ADVANCED OPTIONS
+Block LAN to WAN Multicast nadn Broadcast Data:Unchecked
+VLAN:2070
+Multicast Enhancement:Enable multicast enhancement (IGMPv3):Checked
+
+RandomNoT
+Security: WPA Personal
+ADVANCED OPTIONS
+Block LAN to WAN Multicast nadn Broadcast Data:Unchecked
+VLAN:2051
+Multicast Enhancement:Enable multicast enhancement (IGMPv3):Checked

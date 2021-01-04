@@ -1,0 +1,68 @@
+#!/bin/sh
+#
+# Parm
+#   st for Scripting server Terminal. Default(blank)
+#   sf for Scripting server ftp.
+#   at for System server Terminal.
+#   af for System server ftp.
+#      
+#   chkpwrCall
+#
+#
+#
+wServer="5.220.49.8"
+wCmd=''
+#
+# When editing the user and pass files.
+# Make sure NOT to have newline or carage return in the files.
+#
+wUser=`cat ~/.myssh/user`
+#
+# The -o options are becase of the different keys on the primary and secondary servers.
+#
+wOptions="-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+#
+# Port 5022 is the System server
+# Port 5023 is the Scripting server
+#
+case $1 in
+  at)
+    wPort=5022
+    wTypeS=ssh
+    wTypeP="-p"
+    ;;
+  af)
+    wPort=5022
+    wTypeS=sftp
+    wTypeP="-P"
+    ;;
+  sf|chkpwrGet)
+    wPort=5023
+    wTypeS=sftp
+    wTypeP="-P"
+    ;;
+  *)
+    wPort=5023
+    wTypeS=ssh
+    wTypeP="-p"
+    ;;
+esac
+#
+case $1 in
+  chkpwrCall)
+    wCmd=/home/shared/n63241no/scripts/chkpwr.sh
+    ;;
+  chkpwrGet)
+    wCmd='chkpwr.txt'
+    wServer="$wServer:logs/chkpwr/chkpwr.txt"
+    ;;
+  *)
+    ;;
+esac
+#
+#
+#echo sshpass -f ~/.myssh/pass $wTypeS $wTypeP $wPort $wOptions $wUser@$wServer $wCmd
+#
+sshpass -f ~/.myssh/pass $wTypeS $wTypeP $wPort $wOptions $wUser@$wServer $wCmd
+
+

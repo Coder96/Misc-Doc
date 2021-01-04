@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# When editing the user and pass files.
+# Make sure NOT to have newline or carage return in the files.
+#
+wUser=`cat ~/.myssh/user`
+#
+# The -o options are becase of the different keys on the primary and secondary servers.
+#
+wOptions="-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+#
+# Port 5022 is the System server
+# Port 5023 is the Scripting server
+#
+case $1 in
+  a)
+    wPort=5022
+    ;;
+  *)
+    wPort=5023
+    ;;
+esac
+#
+#
+#
+#echo sshpass -f ~/.myssh/pass ssh $wUser@5.220.49.8 -p$wPort $wOptions
+#
+sshpass -f ~/.myssh/pass ssh $wUser@5.220.49.8 -p$wPort $wOptions

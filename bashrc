@@ -24,13 +24,12 @@ Clr_LCyan="$(echo -e "\033[01;36m")"
 Clr_White="$(echo -e "\033[01;37m")"
 
 if [ $USER = 'root' ]; then
-  PROMP_USER_COLOR=$Clr_Red
+  PROMP_USER_COLOR=$Clr_LRed
 else
-  PROMP_USER_COLOR=$Clr_Blue
+  PROMP_USER_COLOR=$Clr_LBlue
 fi
 
-PS1='${debian_chroot:+($debian_chroot)}\[${Clr_LiGray}\]\t \[${PROMP_USER_COLOR}\]\u\[${Clr_White}\]:\[${Clr_LGreen}\](\[${Clr_Purple}\]\h\[${Clr_LGreen}\])\[${Clr_White}\]:\[${Clr_Cyan>
-
+PS1='${debian_chroot:+($debian_chroot)}\[${Clr_LiGray}\]\t \[${PROMP_USER_COLOR}\]\u\[${Clr_White}\]:\[${Clr_LGreen}\](\[${Clr_LPurple}\]\h\[${Clr_LGreen}\])\[${Clr_White}\]:\[${Clr_LCy>
 # some more ls aliases
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'

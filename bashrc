@@ -5,8 +5,31 @@
 #------------------------------------------------------------------------------------
 force_color_prompt=yes
 
-Search for PS1 make 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;30m\]\t \[\033[01;37m\]\u:\[\033[01;33m\]\[\033[01;32m\](\[\033[01;35m\]\h\[\033[01;32m\])\[\033[00m\]:\[\033[01;96m\]$(pwd)\[\033[00m\]\$ '
+Clr_Black="$(echo -e "\033[00;30m")"
+Clr_Red="$(echo -e "\033[00;31m")"
+Clr_Green="$(echo -e "\033[00;32m")"
+Clr_BrOr="$(echo -e "\033[00;33m")"
+Clr_Blue="$(echo -e "\033[00;34m")"
+Clr_Purple="$(echo -e "\033[00;35m")"
+Clr_Cyan="$(echo -e "\033[00;36m")"
+Clr_LiGray="$(echo -e "\033[00;37m")"
+
+Clr_DGrey="$(echo -e "\033[01;30m")"
+Clr_LRed="$(echo -e "\033[01;31m")"
+Clr_LGreen="$(echo -e "\033[01;32m")"
+Clr_Yellow="$(echo -e "\033[01;33m")"
+Clr_LBlue="$(echo -e "\033[01;34m")"
+Clr_LPurple="$(echo -e "\033[01;35m")"
+Clr_LCyan="$(echo -e "\033[01;36m")"
+Clr_White="$(echo -e "\033[01;37m")"
+
+if [ $USER = 'root' ]; then
+  PROMP_USER_COLOR=$Clr_Red
+else
+  PROMP_USER_COLOR=$Clr_Blue
+fi
+
+PS1='${debian_chroot:+($debian_chroot)}\[${Clr_LiGray}\]\t \[${PROMP_USER_COLOR}\]\u\[${Clr_White}\]:\[${Clr_LGreen}\](\[${Clr_Purple}\]\h\[${Clr_LGreen}\])\[${Clr_White}\]:\[${Clr_Cyan>
 
 # some more ls aliases
 alias ls='ls --color=auto'

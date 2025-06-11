@@ -35,7 +35,12 @@ PS1='${debian_chroot:+($debian_chroot)}\[${Clr_LiGray}\]\t \[${PROMP_USER_COLOR}
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias lla='ls -la --color=auto'
-alias l='ls -CF --color=auto'
+alias l='ls -CF --color=auto
+
+alias grep='grep --color'
+
+alias lwf='setterm -linewrap off'
+alias lwn='setterm -linewrap on'
 
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then

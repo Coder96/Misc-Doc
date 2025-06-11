@@ -29,7 +29,7 @@ else
   PROMP_USER_COLOR=$Clr_LBlue
 fi
 
-PS1='${debian_chroot:+($debian_chroot)}\[${Clr_LiGray}\]\t \[${PROMP_USER_COLOR}\]\u\[${Clr_White}\]:\[${Clr_LPurple}\]\h\[${Clr_White}\]:\[${Clr_LCyan}\]$(pwd)\[\033[00m\] \$ '
+PS1='${debian_chroot:+($debian_chroot)}\[${Clr_LiGray}\]\t \[${PROMP_USER_COLOR}\]\u\[${Clr_White}\]:\[${Clr_LGreen}\](\[${Clr_LPurple}\]\h\[${Clr_LGreen}\])\[${Clr_White}\]:\[${Clr_LCyan}\]$(pwd)\[\033[00m\]\$ '
 
 # some more ls aliases
 alias ls='ls --color=auto'

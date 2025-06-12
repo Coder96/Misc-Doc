@@ -192,22 +192,22 @@ EXEC 00;32
 .ogx 00;35
 # audio formats
 # old one had them 00;30, I got used to that.
-.aac 00;30
-.au 00;30
-.flac 00;30
-.mid 00;30
-.midi 00;30
-.mka 00;30
-.mp3 00;30
-.mpc 00;30
-.ogg 00;30
-.ra 00;30
-.wav 00;30
+.aac 00;31
+.au 00;31
+.flac 00;31
+.mid 00;31
+.midi 00;31
+.mka 00;31
+.mp3 00;31
+.mpc 00;31
+.ogg 00;31
+.ra 00;31
+.wav 00;31
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
-.axa 00;30
-.oga 00;30
-.spx 00;30
-.xspf 00;30
+.axa 00;31
+.oga 00;31
+.spx 00;31
+.xspf 00;31
 ###
 .html 00;35
 .HTML 00;35
